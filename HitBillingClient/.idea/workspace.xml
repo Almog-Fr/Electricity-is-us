@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbb8fb1c-f41c-4890-8512-2257795572ef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/BillAddController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/BillDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerAddController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/ElectricianViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-add-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-delete-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-add-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-delete-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/electrician-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/FirstScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/FirstScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/CustomerView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/CustomerView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/FirstScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/FirstScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/customer-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/customer-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +48,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2QTg6fqgCdQW9GPNYMbRMYrRRIM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,10 +58,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/alfranco/HIT/HitBillingClient/src/main/resources/com/hit/view"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alfranco\HIT\HitBillingClient\src\main\resources\com\hit\view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\alfranco\HIT\HitBillingClient\src\main\java\com\hit\resources" />
     </key>
@@ -93,15 +119,15 @@
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hit/view/FirstScreenController.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

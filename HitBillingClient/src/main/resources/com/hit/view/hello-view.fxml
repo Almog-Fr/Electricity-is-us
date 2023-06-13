@@ -14,7 +14,7 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Button layoutX="145.0" layoutY="315.0" mnemonicParsing="false" text="Electrician">
+      <Button layoutX="145.0" layoutY="315.0" mnemonicParsing="false" onAction="#onElectricianButtonClick" text="Electrician">
          <font>
             <Font size="19.0" />
          </font>
