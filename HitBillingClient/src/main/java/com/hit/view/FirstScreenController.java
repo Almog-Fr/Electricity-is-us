@@ -39,4 +39,12 @@ public class FirstScreenController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void onElectricianButtonClick(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("electrician-view.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
