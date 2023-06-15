@@ -1,4 +1,17 @@
 package com.hit.view;
 
-public class CustomerDeleteController {
+import javafx.event.ActionEvent;
+
+import java.io.IOException;
+
+public class CustomerDeleteController implements SceneSwitcher{
+    @Override
+    public void changeScene(ActionEvent event, String sceneName) throws IOException {
+
+    }
+
+    @Override
+    public void onBackButtonClick(ActionEvent event) throws IOException {
+
+    }
 }
