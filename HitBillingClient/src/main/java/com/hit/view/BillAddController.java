@@ -9,16 +9,22 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class BillAddController {
+public class BillAddController implements SceneSwitcher {
     private Stage stage;
     private Scene scene;
     private Parent root;
 
-    public void onAddBillBackButtonClick(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("electrician-view.fxml"));
+    @Override
+    public void changeScene(ActionEvent event, String sceneName) throws IOException {
+        root = FXMLLoader.load(getClass().getResource(sceneName));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @Override
+    public void onBackButtonClick(ActionEvent event) throws IOException {
+        changeScene(event,"electrician-view.fxml");
     }
 }

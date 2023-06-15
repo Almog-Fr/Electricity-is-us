@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ElectricianViewController {
+public class ElectricianViewController implements SceneSwitcher {
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -22,7 +22,8 @@ public class ElectricianViewController {
         stage.show();
     }
 
-    public void goBackElectricianMenu(ActionEvent event) throws IOException {
+    @Override
+    public void onBackButtonClick(ActionEvent event) throws IOException {
         changeScene(event,"hello-view.fxml");
     }
 
@@ -42,4 +43,9 @@ public class ElectricianViewController {
         changeScene(event,"bill-delete-view.fxml");
     }
 
+    public void onViewCustomersButtonClick(ActionEvent event) {
+    }
+
+    public void onViewBillsButtonClick(ActionEvent event) {
+    }
 }

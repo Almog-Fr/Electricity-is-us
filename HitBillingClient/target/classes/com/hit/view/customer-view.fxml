@@ -6,14 +6,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="717.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hit.view.CustomerView">
+<AnchorPane prefHeight="717.0" prefWidth="980.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.hit.view.CustomerViewController">
    <children>
-      <Button layoutX="803.0" layoutY="678.0" mnemonicParsing="false" onAction="#goBackCustomerClick" prefHeight="25.0" prefWidth="172.0" text="Go Back" />
+      <Button layoutX="803.0" layoutY="678.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="25.0" prefWidth="172.0" text="Go Back" />
       <TextField fx:id="billIDInput" layoutX="14.0" layoutY="46.0" prefHeight="44.0" prefWidth="780.0" promptText="Enter Bill ID here" />
       <Button layoutX="803.0" layoutY="103.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Find Bills By Customer" />
       <Button layoutX="803.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Find Bill By ID" />
       <TextField fx:id="fullNameInput" layoutX="14.0" layoutY="103.0" prefHeight="44.0" prefWidth="780.0" promptText="Enter your name here" />
-      <Button layoutX="803.0" layoutY="649.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Pay Bill" />
+      <Button layoutX="803.0" layoutY="649.0" mnemonicParsing="false" onAction="#payBillButtonClick" prefHeight="25.0" prefWidth="172.0" text="Pay Bill" />
       <TableView fx:id="searchResultTable" layoutX="14.0" layoutY="159.0" prefHeight="544.0" prefWidth="780.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
