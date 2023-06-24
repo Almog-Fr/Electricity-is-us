@@ -15,10 +15,12 @@ import java.util.Map;
 public class Model implements Serializable {
     Client client = new Client();
 
-    public Model() {}
+    public Model() throws IOException {
+        client.connect();
+    }
 
     public void connect() throws IOException {
-        client.connect();
+
     }
 
     public void disconnect(){
@@ -31,7 +33,7 @@ public class Model implements Serializable {
         }
     }
 
-    public Request getRequest() throws IOException {
+    public Request getResponse() throws IOException {
         Request request = new Request();
        try {
            String json = client.readResponse();
