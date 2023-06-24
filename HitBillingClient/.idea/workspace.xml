@@ -5,38 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbb8fb1c-f41c-4890-8512-2257795572ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/AllBillViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/AllCustomerViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/ElectricianAuthViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/PayBillController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/SceneSwitcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-bill-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-customer-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/electrician-auth-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/pay-bill-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/model/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/model/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/model/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/controller/BillController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/controller/BillController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/server/HandleRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/server/HandleRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/server/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/server/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/HandleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/HandleRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/BillAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/BillAddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/BillDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/BillDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerAddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/ElectricianViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/ElectricianViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/FirstScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/FirstScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HitBillingClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HitBillingClient.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-add-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-add-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-delete-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-delete-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-add-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-add-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-delete-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-delete-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/electrician-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/electrician-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/CustomerView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/ElectricianView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/FirstScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/FirstScreenController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/customer-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/customer-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/electrician-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/electrician-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-bill-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-bill-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-customer-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-customer-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/electrician-auth-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/electrician-auth-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/all-bill-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/all-bill-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/all-customer-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/all-customer-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/electrician-auth-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/electrician-auth-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +58,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alfranco/HIT/HitBillingClient/src/main/resources/com/hit/view&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/alfranco/HIT/HITBillSystem/lib/gson-2.8.6.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alfranco\HIT\HitBillingClient\src\main\resources\com\hit\view" />
@@ -82,7 +77,7 @@
       <recent name="C:\Users\alfranco\HIT\HitBillingClient\src\main\java\com\hit\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Driver">
+  <component name="RunManager" selected="Application.com.hit.view.test">
     <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hit.view.Driver" />
       <module name="HitBillingClient" />
@@ -115,8 +110,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Driver" />
         <item itemvalue="Application.com.hit.view.test" />
+        <item itemvalue="Application.Driver" />
       </list>
     </recent_temporary>
   </component>

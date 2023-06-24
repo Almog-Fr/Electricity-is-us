@@ -1,4 +1,4 @@
-package com.hit.server;
+package com.hit.model;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -11,6 +11,10 @@ public class Request implements Serializable {
     public Request(String header, Map<String, String> body) {
         this.header = header;
         this.body = body;
+    }
+
+    public Request() {
+
     }
 
     public Map<String, String> getBody() {
