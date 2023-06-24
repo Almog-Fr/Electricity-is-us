@@ -32,71 +32,53 @@ public class HandleRequest implements Runnable {
             Scanner scanner = new Scanner(in);
             String requestStr = scanner.nextLine();
             Request request = gson.fromJson(requestStr,Request.class);
-            switch (request.getType()){
-                case "bill":
-                    switch (request.getAction()){
-                        case "pay":
-                            if(billController.payBill(Long.parseLong(request.getBody().get("id")))){
-                            out.write("Bill payed successfully!");
-                            out.flush();}
-                            else{
-                                out.write("Bill pay went wrong");
-                                out.flush();
-                            }
-                            break;
-                        case "get":
-                            Bill bill = billController.getBill(Long.parseLong(request.getBody().get("id")));
-                            out.write(gson.toJson(new Response("GET BILL", Map.of("Bill",bill)),Response.class));
-                            out.flush();
-                            break;
-                        case "add":
-                            billController.addBill(Long.parseLong(request.getBody().get("id")),
-                                    request.getBody().get("date"),
-                                    Double.parseDouble(request.getBody().get("sum")),
-                                    request.getBody().get("ownerName"));
-                            out.write("Bill added successfully!");
-                            out.flush();
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case "customer":
-                    switch (request.getAction()){
-                        case "get":
-                            Customer customer = customerController.getCustomer(Long.parseLong(request.getBody().get("id")));
-                            out.write(gson.toJson(new Response("GET CUSTOMER", Map.of("customer",customer)),Response.class));
-                            out.flush();
-                            break;
-                        case "add":
-                            if(customerController.addNewCustomer(Long.parseLong(request.getBody().get("id")),
-                                    request.getBody().get("customerName"))){
-                            out.write("Customer added successfully!");
-                            out.flush();}
-                            else{
-                                out.write("Customer addition failed");
-                                out.flush();
-                            }
-                            break;
-                        case "delete":
-                            if(customerController.deleteCustomer(Long.parseLong(request.getBody().get("id")))){
-                            out.write("Customer deleted successfully!");
-                            out.flush();}
-                            else{
-                                out.write("Customer deletion failed");
-                                out.flush();
-                            }
-                            break;
-                        default:
-                            break;
-                    }
+            String header = request.getHeader();
 
-                    break;
-
-                default:
-                    break;
+            if(header.contains("bill")){
+                if(header.contains("pay")){
+                    if(billController.payBill(Long.parseLong(request.getBody().get("id")))){
+                        out.write("Bill payed successfully!");
+                        out.flush();}
+                    else{
+                        out.write("Bill pay went wrong");
+                        out.flush();
+                    }
+                }
+                if(header.contains("get")){
+                    Bill bill = billController.getBill(Long.parseLong(request.getBody().get("id")));
+                    out.write(gson.toJson(new Response("GET BILL", Map.of("Bill",bill)),Response.class));
+                    out.flush();
+                }
+                if(header.contains("add")){
+                    billController.addBill(Long.parseLong(request.getBody().get("id")),
+                            request.getBody().get("date"),
+                            Double.parseDouble(request.getBody().get("sum")),
+                            request.getBody().get("ownerName"));
+                    out.write("Bill added successfully!");
+                    out.flush();
+                }
+            } else if (header.contains("customer")) {
+                if(header.contains("add")){
+                    if(customerController.addNewCustomer(Long.parseLong(request.getBody().get("id")),
+                            request.getBody().get("customerName"))){
+                        out.write("Customer added successfully!");
+                        out.flush();}
+                }
+                if(header.contains("get")){
+                    Customer customer = customerController.getCustomer(Long.parseLong(request.getBody().get("id")));
+                    out.write(gson.toJson(new Response("GET CUSTOMER", Map.of("customer",customer)),Response.class));
+                    out.flush();
+                }
+                if(header.contains("delete")){
+                    if(customerController.deleteCustomer(Long.parseLong(request.getBody().get("id")))){
+                        out.write("Customer deleted successfully!");
+                        out.flush();}
+                    else{
+                        out.write("Customer deletion failed");
+                        out.flush();
+                    }
+                }
             }
-
             out.close();
             in.close();
             this.socket.close();

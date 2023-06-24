@@ -9,7 +9,13 @@ public class test {
 
     public static void main(String[] args) {
 
-        LocalDate localDate = LocalDate.of(2014,4,1);
-        System.out.println(LocalDate.now().getDayOfMonth());
+        String name = "AlmogFranco";
+        String firstName = "Almog";
+        String lastName = "Franco";
+        String stam = "Akneshj";
+
+        System.out.println(name.contains(firstName));
+        System.out.println(name.contains(lastName));
+        System.out.println(name.contains(stam));
     }
 }
