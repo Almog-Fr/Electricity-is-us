@@ -16,7 +16,7 @@ public class Model implements Serializable {
     Client client = new Client();
 
     public Model() throws IOException {
-        client.connect();
+        //client.connect();
     }
 
     public void connect() throws IOException {
@@ -30,20 +30,13 @@ public class Model implements Serializable {
     public void sendRequest(String header, Map<String,String> body){
         if(!header.isEmpty() && !body.isEmpty()){
             client.sendRequest(header,body);
+            client.listenForResponse();
         }
+
     }
 
-    public Request getResponse() throws IOException {
-        Request request = new Request();
-       try {
-           String json = client.readResponse();
-           Gson gson = (new GsonBuilder()).create();
-           Type type = new TypeToken<Request>(){}.getType();
-           request = gson.fromJson(json,type);
-       } catch (Exception e){
-           e.printStackTrace();
-       }
-       return request;
+    public String getResponse() throws IOException {
+       return client.getLastResponse();
     }
 
 }

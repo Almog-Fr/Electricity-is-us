@@ -56,14 +56,18 @@ public class CustomerAddController implements SceneSwitcher {
         body.put("id",id);
         body.put("fullName",fullName);
         model.sendRequest("customer/add",body);
-        Request response = model.getResponse();
-        System.out.println(response);
-        String message = response.getBody().get("message");
-        if(message.equals("Customer added successfully")){
-            customerMessage.setText("Customer added successfully");
+        try{
+            String response = model.getResponse();
+        }catch(Exception e){
+            e.printStackTrace();
         }
-        else{
-            customerMessage.setText("Customer addition failed");
-        }
+
+//        System.out.println(response);
+//        if(response.contains("Customer added successfully")){
+//            customerMessage.setText("Customer added successfully");
+//        }
+//        else{
+//            customerMessage.setText("Customer addition failed");
+//        }
     }
 }
