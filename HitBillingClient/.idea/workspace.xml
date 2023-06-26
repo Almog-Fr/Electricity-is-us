@@ -5,27 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbb8fb1c-f41c-4890-8512-2257795572ef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/dao/CustomerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/dao/CustomerDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/server/HandleRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/server/HandleRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/server/test$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/server/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/out/production/ElectricBillProject/com/hit/server/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dao/CustomerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dao/CustomerDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/HandleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/HandleRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/resources/customer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/resources/customer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HitBillingClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HitBillingClient.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/model/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/model/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerAddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerAddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-add-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-add-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hit/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/model/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/model/Model$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hit/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/model/Model.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/CustomerAddController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/CustomerAddController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hit/view/customer-add-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hit/view/customer-add-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,41 +124,53 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1687723890140">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/592.-1080.1920.1040@0.0.1366.728" timestamp="1687723890140" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1687617948389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1687617948389" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1687629280263">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1687724930982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/592.-1080.1920.1040@0.0.1366.728" timestamp="1687724930982" />
     <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1687629280263" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1687629280263">
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1687724930982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728/592.-1080.1920.1040@0.0.1366.728" timestamp="1687724930982" />
     <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1687629280263" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1687629280263">
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1687724930982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728/592.-1080.1920.1040@0.0.1366.728" timestamp="1687724930982" />
     <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1687629280263" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1687629280263">
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1687724930982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728/592.-1080.1920.1040@0.0.1366.728" timestamp="1687724930982" />
     <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1687629280263" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1687629280263">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1687724930982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/592.-1080.1920.1040@0.0.1366.728" timestamp="1687724930982" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1687629280263" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1687629280263">
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1687724930982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/592.-1080.1920.1040@0.0.1366.728" timestamp="1687724930982" />
     <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1687629280263" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1687629280263">
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1687724930982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/592.-1080.1920.1040@0.0.1366.728" timestamp="1687724930982" />
     <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1687629280263" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1687629280263">
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1687724930982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/592.-1080.1920.1040@0.0.1366.728" timestamp="1687724930982" />
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1687629280263" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1687617953161">
       <screen x="0" y="0" width="1366" height="728" />
@@ -192,30 +193,10 @@
           <line>50</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint type="java-line">
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hit/view/CustomerAddController.java</url>
           <line>56</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hit/model/Client.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hit/view/CustomerAddController.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hit/model/Model.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hit/model/Client.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

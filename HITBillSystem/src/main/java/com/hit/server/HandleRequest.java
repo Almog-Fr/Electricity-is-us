@@ -60,11 +60,13 @@ public class HandleRequest implements Runnable {
                     if(customerController.addNewCustomer(Long.parseLong(request.getBody().get("id")),
                             request.getBody().get("fullName"))){
                         HashMap<String,String> messages = new HashMap<>();
+                        System.out.println("Customer added");
                         messages.put("message","Customer added successfully");
                         Request response = new Request("success",messages);
                         String json = gson.toJson(response,Request.class);
                         out.write(json);
-                        out.flush();}
+                        out.flush();
+                    }
                     else{
                         HashMap<String,String> messages = new HashMap<>();
                         messages.put("message","Customer addition failed");
