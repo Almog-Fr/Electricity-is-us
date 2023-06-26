@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class BillDaoImpl implements IDao<Long, Bill> {
 
-    public static final String FILE_PATH = "C:\\Users\\almog\\Downloads\\LibraryProj\\ElectricBillProject\\src\\main\\resources\\bill.txt";
+    public static final String FILE_PATH = System.getProperty("user.dir") + "\\src\\main\\resources\\bill.txt";
     CustomerDaoImpl customerDaoImpl = new CustomerDaoImpl();
 
     public BillDaoImpl() {

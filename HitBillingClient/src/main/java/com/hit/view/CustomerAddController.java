@@ -1,6 +1,7 @@
 package com.hit.view;
 
 import com.hit.model.Model;
+import com.hit.model.ModelSingleton;
 import com.hit.model.Request;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,7 +21,7 @@ public class CustomerAddController implements SceneSwitcher {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private Model model = new Model();
+    private Model model = ModelSingleton.getInstance();
     @FXML
     private TextField customerAddName;
     @FXML
@@ -29,6 +30,7 @@ public class CustomerAddController implements SceneSwitcher {
     private Text customerMessage;
 
     public CustomerAddController() throws IOException {
+
     }
 
 
@@ -46,7 +48,7 @@ public class CustomerAddController implements SceneSwitcher {
         changeScene(event,"electrician-view.fxml");
     }
 
-    public void onAddCustomerClick(ActionEvent event) throws IOException {
+    public void onAddCustomerClick(ActionEvent event) throws IOException, ClassNotFoundException {
         String id = customerAddId.getText();
         String fullName = customerAddName.getText();
         if(id.isBlank() || fullName.isBlank()){
@@ -56,18 +58,13 @@ public class CustomerAddController implements SceneSwitcher {
         body.put("id",id);
         body.put("fullName",fullName);
         model.sendRequest("customer/add",body);
-        try{
-            String response = model.getResponse();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+        String response = model.getResponse();
 
-//        System.out.println(response);
-//        if(response.contains("Customer added successfully")){
-//            customerMessage.setText("Customer added successfully");
-//        }
-//        else{
-//            customerMessage.setText("Customer addition failed");
-//        }
+        if(response.contains("Customer added successfully")){
+            customerMessage.setText("Customer added successfully");
+        }
+        else{
+            customerMessage.setText("Customer addition failed");
+        }
     }
 }

@@ -25,8 +25,9 @@ public class HandleRequest implements Runnable {
 
     public void run() {
         try {
+            while (true){
             BufferedReader in = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
-            PrintWriter out = new PrintWriter(new ObjectOutputStream(this.socket.getOutputStream()));
+            PrintWriter out = new PrintWriter(new ObjectOutputStream(this.socket.getOutputStream()),true);
             Scanner scanner = new Scanner(in);
             String requestStr = scanner.nextLine().substring(6);
             Request request = gson.fromJson(requestStr,Request.class);
@@ -36,16 +37,16 @@ public class HandleRequest implements Runnable {
                 if(header.contains("pay")){
                     if(billController.payBill(Long.parseLong(request.getBody().get("id")))){
                         out.write("Bill payed successfully!");
-                        out.flush();}
+                        }
                     else{
                         out.write("Bill pay went wrong");
-                        out.flush();
+
                     }
                 }
                 if(header.contains("get")){
                     Bill bill = billController.getBill(Long.parseLong(request.getBody().get("id")));
                     out.write(gson.toJson(new Response("GET BILL", Map.of("Bill",bill)),Response.class));
-                    out.flush();
+
                 }
                 if(header.contains("add")){
                     billController.addBill(Long.parseLong(request.getBody().get("id")),
@@ -53,7 +54,7 @@ public class HandleRequest implements Runnable {
                             Double.parseDouble(request.getBody().get("sum")),
                             request.getBody().get("ownerName"));
                     out.write("Bill added successfully!");
-                    out.flush();
+
                 }
             } else if (header.contains("customer")) {
                 if(header.contains("add")){
@@ -64,36 +65,39 @@ public class HandleRequest implements Runnable {
                         messages.put("message","Customer added successfully");
                         Request response = new Request("success",messages);
                         String json = gson.toJson(response,Request.class);
-                        out.write(json);
-                        out.flush();
+                        out.println(json);
                     }
                     else{
                         HashMap<String,String> messages = new HashMap<>();
                         messages.put("message","Customer addition failed");
                         Request response = new Request("failure",messages);
                         String json = gson.toJson(response,Request.class);
-                        out.write(json);
-                        out.flush();
+                        out.println(json);
                     }
                 }
                 if(header.contains("get")){
                     Customer customer = customerController.getCustomer(Long.parseLong(request.getBody().get("id")));
                     out.write(gson.toJson(new Response("GET CUSTOMER", Map.of("customer",customer)),Response.class));
-                    out.flush();
                 }
                 if(header.contains("delete")){
                     if(customerController.deleteCustomer(Long.parseLong(request.getBody().get("id")))){
                         out.write("Customer deleted successfully!");
-                        out.flush();}
+                        }
                     else{
                         out.write("Customer deletion failed");
-                        out.flush();
+
                     }
                 }
             }
-            out.close();
-            in.close();
-            this.socket.close();
+            else if(header.contains("stop")){
+                out.close();
+                in.close();
+                this.socket.close();
+                break;
+            }
+
+            }
+
         } catch (IOException var4) {
             System.out.println("Server error");
         }

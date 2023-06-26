@@ -24,29 +24,24 @@ public class Client {
     public void sendRequest(String action,Map<String, String> body){
         try{
             objectOutputStream = new ObjectOutputStream(clientSocket.getOutputStream());
-
             Gson gson = (new GsonBuilder()).create();
             Request request = new Request(action,body);
             String json = gson.toJson(request,Request.class);
-            PrintWriter out = new PrintWriter(objectOutputStream);
-            out.write(json);
-            out.flush();
+            PrintWriter out = new PrintWriter(objectOutputStream,true);
+            out.println(json);
         }catch(Exception re){
             re.printStackTrace();
         }
 
     }
 
-    public void readResponse() throws IOException {
+    public String readResponse() throws IOException {
+        responses = new ArrayList<>();
         inputSteamReader = new InputStreamReader(clientSocket.getInputStream());
         BufferedReader in = new BufferedReader(inputSteamReader);
         Scanner scanner = new Scanner(in);
-        String json = scanner.nextLine();
-        responses.add(json);
-    }
-
-    public String getLastResponse(){
-        return this.responses.get(responses.size() - 1 );
+        String json = scanner.nextLine().substring(6);
+        return json;
     }
 
     public void disconnect(){
@@ -62,20 +57,4 @@ public class Client {
         }
     }
 
-    public void listenForResponse(){
-        new Thread(new Runnable(){
-
-            @Override
-            public void run() {
-                try {
-                    while(true){
-                        readResponse();
-                    }
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
 }
