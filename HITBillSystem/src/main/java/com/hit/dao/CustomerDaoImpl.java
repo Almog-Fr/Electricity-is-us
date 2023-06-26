@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
 
-    public static final String FILE_PATH = "C:\\Users\\almog\\HIT\\Electricity-is-us\\HITBillSystem\\src\\main\\resources\\customer.txt\\";
+    public static final String FILE_PATH = System.getProperty("user.dir") + "\\src\\main\\resources\\customer.txt\\";
 
     public CustomerDaoImpl() {
         try {

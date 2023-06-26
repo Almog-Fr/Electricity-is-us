@@ -10,33 +10,32 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.lang.reflect.Type;
 import java.net.Socket;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Model implements Serializable {
     Client client = new Client();
 
-    public Model() throws IOException {
-        //client.connect();
-    }
 
-    public void connect() throws IOException {
+    public Model() throws IOException, RuntimeException {
 
     }
 
     public void disconnect(){
+        client.sendRequest("stop",new HashMap<>());
         client.disconnect();
     }
 
     public void sendRequest(String header, Map<String,String> body){
         if(!header.isEmpty() && !body.isEmpty()){
             client.sendRequest(header,body);
-            client.listenForResponse();
+
         }
 
     }
 
-    public String getResponse() throws IOException {
-       return client.getLastResponse();
+    public String getResponse() throws IOException, ClassNotFoundException {
+       return client.readResponse();
     }
 
 }

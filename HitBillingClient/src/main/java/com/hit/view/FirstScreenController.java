@@ -1,5 +1,6 @@
 package com.hit.view;
 
+import com.hit.model.Model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

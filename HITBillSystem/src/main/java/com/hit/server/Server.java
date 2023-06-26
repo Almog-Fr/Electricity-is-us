@@ -2,9 +2,13 @@ package com.hit.server;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Server {
     private static boolean serverUp = true;
+    private static ExecutorService pool = Executors.newFixedThreadPool(4);
 
     public Server() {
     }
@@ -15,7 +19,9 @@ public class Server {
 
             while(serverUp) {
                 Socket someClient = server.accept();
-                (new Thread(new HandleRequest(someClient))).start();
+                Thread newClient = new Thread(new HandleRequest(someClient));
+                //(new Thread(new HandleRequest(someClient))).start();
+                pool.execute(newClient);
             }
 
             server.close();

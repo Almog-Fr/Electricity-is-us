@@ -10,8 +10,7 @@ import java.util.HashMap;
 
 public class test {
     public static void main(String[] args) {
-        String test = "12";
-        long temp = Long.parseLong(test);
-        System.out.println(temp);
+
+        System.out.println(System.getProperty("user.dir"));
     }
 }
