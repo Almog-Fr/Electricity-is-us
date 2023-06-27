@@ -35,9 +35,6 @@ public class ElectricianViewController implements SceneSwitcher {
         changeScene(event,"customer-add-view.fxml");
     }
 
-    public void onCustomerDeleteButtonClick(ActionEvent event) throws IOException {
-        changeScene(event,"customer-delete-view.fxml");
-    }
 
     public void onBillDeleteClick(ActionEvent event) throws IOException {
         changeScene(event,"bill-delete-view.fxml");

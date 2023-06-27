@@ -27,14 +27,6 @@ public class CustomerService {
         return customerDao.save(customer);
     }
 
-    public boolean removeCustomer(long customerId) {
-        Customer customer = customerDao.find(customerId);
-        if(customer == null)
-            return false;
-        customerDao.delete(customer);
-        return true;
-    }
-
     public ArrayList<Customer> getCustomers(String customerName){
         return customerDao.getCustomers(customerName);
     }

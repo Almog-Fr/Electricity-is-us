@@ -26,7 +26,7 @@ public class BillDaoImpl implements IDao<Long, Bill> {
         }
     }
 
-    @Override
+
     public void delete(Bill bill) {
         HashMap bills;
         try {

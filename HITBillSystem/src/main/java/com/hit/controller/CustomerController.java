@@ -18,8 +18,4 @@ public class CustomerController {
         return customerService.getCustomer(id);
     }
 
-    public boolean deleteCustomer(long id){
-        return customerService.removeCustomer(id);
-    }
-
 }

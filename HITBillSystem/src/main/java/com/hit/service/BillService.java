@@ -22,7 +22,7 @@ public class BillService {
     }
 
 
-    public Bill getBill(Long billId) {
+    public Bill getBill(long billId) {
         Bill bill = billDao.find(billId);
         if(bill == null)
             return null;

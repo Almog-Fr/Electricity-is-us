@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="526.0" prefWidth="599.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.hit.view.ElectricianViewController">
+<AnchorPane prefHeight="526.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hit.view.ElectricianViewController">
    <children>
       <Text layoutX="187.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Electrician Menu">
          <font>
@@ -43,11 +43,6 @@
          </font>
       </Button>
       <Button layoutX="400.0" layoutY="267.0" mnemonicParsing="false" onAction="#onViewBillsButtonClick" text="View Bills">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="81.0" layoutY="319.0" mnemonicParsing="false" onAction="#onCustomerDeleteButtonClick" text="Delete Customer">
          <font>
             <Font size="16.0" />
          </font>

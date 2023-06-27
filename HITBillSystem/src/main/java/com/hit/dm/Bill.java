@@ -7,14 +7,14 @@ public class Bill implements Serializable {
     private long id;
     private String date;
     private double sum;
-    private String ownerName;
+    private String ownerId;
     private boolean isPayed = false;
 
     public Bill(long id, String date, double sum, String ownerName) {
         this.id = id;
         this.date = date;
         this.sum = sum;
-        this.ownerName = ownerName;
+        this.ownerId = ownerName;
     }
 
     public long getId() {
@@ -29,8 +29,8 @@ public class Bill implements Serializable {
         return sum;
     }
 
-    public String getOwnerName() {
-        return ownerName;
+    public String getOwnerId() {
+        return ownerId;
     }
 
     public boolean isPayed() {
