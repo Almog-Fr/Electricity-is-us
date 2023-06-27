@@ -15,7 +15,6 @@ public class Client {
     private Socket clientSocket= new Socket("localhost",12345);
     private ObjectOutputStream objectOutputStream;
     private InputStreamReader inputSteamReader;
-    private ArrayList<String> responses;
 
     public Client() throws IOException {
 
@@ -36,7 +35,6 @@ public class Client {
     }
 
     public String readResponse() throws IOException {
-        responses = new ArrayList<>();
         inputSteamReader = new InputStreamReader(clientSocket.getInputStream());
         BufferedReader in = new BufferedReader(inputSteamReader);
         Scanner scanner = new Scanner(in);

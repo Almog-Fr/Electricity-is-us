@@ -19,9 +19,7 @@ public class Server {
 
             while(serverUp) {
                 Socket someClient = server.accept();
-                Thread newClient = new Thread(new HandleRequest(someClient));
-                //(new Thread(new HandleRequest(someClient))).start();
-                pool.execute(newClient);
+                (new Thread(new HandleRequest(someClient))).start();
             }
 
             server.close();

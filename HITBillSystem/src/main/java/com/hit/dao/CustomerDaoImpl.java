@@ -26,19 +26,6 @@ public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
     }
 
     @Override
-    public void delete(Customer customer) {
-        HashMap<Long, Customer> customers = null;
-        try {
-            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(FILE_PATH));
-            customers = (HashMap<Long, Customer>) objectInputStream.readObject();
-            customers.remove(customer);
-            objectInputStream.close();
-        } catch (ClassNotFoundException | IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
     public Customer find(Long id) throws IllegalArgumentException {
         HashMap<Long, Customer> customers = null;
         try {
@@ -72,7 +59,7 @@ public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
     }
 
     public ArrayList<Customer> getCustomers(String name){
-        ArrayList<Customer> customersList = new ArrayList<Customer>();
+        ArrayList<Customer> customersList = new ArrayList<>();
         KMP kmp = new KMP();
         try {
             ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(new File(FILE_PATH)));

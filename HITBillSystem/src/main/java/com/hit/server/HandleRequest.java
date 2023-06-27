@@ -48,14 +48,27 @@ public class HandleRequest implements Runnable {
                     out.write(gson.toJson(new Response("GET BILL", Map.of("Bill",bill)),Response.class));
 
                 }
-                if(header.contains("add")){
-                    billController.addBill(Long.parseLong(request.getBody().get("id")),
-                            request.getBody().get("date"),
-                            Double.parseDouble(request.getBody().get("sum")),
-                            request.getBody().get("ownerName"));
-                    out.write("Bill added successfully!");
+                if(header.contains("add")) {
+                    if (customerController.getCustomer(Long.parseLong(request.getBody().get("ownerId"))) != null
+                            && billController.addBill(Long.parseLong(request.getBody().get("id")),
+                                                        request.getBody().get("billDate"),
+                                                        Double.parseDouble(request.getBody().get("billSum")),
+                                                        request.getBody().get("ownerId"))) {
+                        HashMap<String, String> messages = new HashMap<>();
+                        System.out.println("Customer added");
+                        messages.put("message", "Bill added successfully");
+                        Request response = new Request("success", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    } else {
+                        HashMap<String, String> messages = new HashMap<>();
+                        messages.put("message", "Bill addition failed");
+                        Request response = new Request("failure", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                  }
 
-                }
             } else if (header.contains("customer")) {
                 if(header.contains("add")){
                     if(customerController.addNewCustomer(Long.parseLong(request.getBody().get("id")),
@@ -75,19 +88,15 @@ public class HandleRequest implements Runnable {
                         out.println(json);
                     }
                 }
-                if(header.contains("get")){
+                if(header.contains("getById")){
                     Customer customer = customerController.getCustomer(Long.parseLong(request.getBody().get("id")));
                     out.write(gson.toJson(new Response("GET CUSTOMER", Map.of("customer",customer)),Response.class));
                 }
-                if(header.contains("delete")){
-                    if(customerController.deleteCustomer(Long.parseLong(request.getBody().get("id")))){
-                        out.write("Customer deleted successfully!");
-                        }
-                    else{
-                        out.write("Customer deletion failed");
-
-                    }
+                if(header.contains("getByName")){
+                   // Customer customer = customerController.getCustomers(Long.parseLong(request.getBody().get("id")));
+                   // out.write(gson.toJson(new Response("GET CUSTOMER", Map.of("customer",customer)),Response.class));
                 }
+
             }
             else if(header.contains("stop")){
                 out.close();

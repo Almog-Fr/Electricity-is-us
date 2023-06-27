@@ -1,21 +1,16 @@
 package com.hit.view;
 
-import javafx.scene.image.Image;
 
-import java.io.File;
-import java.time.LocalDate;
+import java.util.HashMap;
 
 public class test {
 
     public static void main(String[] args) {
+        HashMap<Integer,String> test = new HashMap<>();
+        test.put(1,"hi");
 
-        String name = "AlmogFranco";
-        String firstName = "Almog";
-        String lastName = "Franco";
-        String stam = "Akneshj";
+        String hi = test.get(2);
+        System.out.println(hi == null);
 
-        System.out.println(name.contains(firstName));
-        System.out.println(name.contains(lastName));
-        System.out.println(name.contains(stam));
     }
 }

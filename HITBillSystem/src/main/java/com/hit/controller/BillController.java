@@ -11,8 +11,8 @@ public class BillController {
 
     }
 
-    public boolean addBill(long id, String date, double sum, String ownerName){
-        return billService.addNewBill(new Bill(id,date,sum,ownerName));
+    public boolean addBill(long id, String date, double sum, String ownerId){
+        return billService.addNewBill(new Bill(id,date,sum,ownerId));
     }
 
     public boolean payBill(long billId){
