@@ -38,8 +38,7 @@ public class BillService {
     public boolean removeBill(Bill bill) {
         if(bill == null)
             return false;
-        billDao.delete(bill);
-        return true;
+        return billDao.delete(bill);
     }
 
 }

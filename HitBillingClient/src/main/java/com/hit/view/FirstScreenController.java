@@ -29,7 +29,7 @@ public class FirstScreenController implements Initializable,SceneSwitcher {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image image = new Image("file:///C:/Users/alfranco/HIT/HitBillingClient/src/main/java/com/hit/resources/transparent%20logo.png");
+        Image image = new Image("file:///" + System.getProperty("user.dir") + "/src/main/java/com/hit/resources/transparent%20logo.png");
         logoView.setImage(image);
     }
 

@@ -9,12 +9,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.hit.view.AllBillViewController">
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hit.view.AllBillViewController">
    <children>
-      <TableView layoutX="36.0" layoutY="106.0" prefHeight="576.0" prefWidth="594.0">
+      <TableView layoutX="36.0" layoutY="106.0" prefHeight="576.0" prefWidth="502.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn prefWidth="150.0" resizable="false" text="ID" />
+          <TableColumn prefWidth="100.0" resizable="false" text="Date" />
+            <TableColumn prefWidth="150.0" resizable="false" text="Owner ID" />
+            <TableColumn prefWidth="100.0" resizable="false" text="Sum" />
         </columns>
       </TableView>
       <TextField layoutX="36.0" layoutY="65.0" promptText="Filter by name" />
@@ -26,10 +28,10 @@
       <ChoiceBox layoutX="217.0" layoutY="65.0" prefHeight="25.0" prefWidth="57.0" />
       <ChoiceBox layoutX="285.0" layoutY="65.0" prefHeight="25.0" prefWidth="57.0" />
       <TextField layoutX="468.0" layoutY="65.0" prefHeight="25.0" prefWidth="92.0" promptText="Filter by sum" />
-      <ChoiceBox layoutX="575.0" layoutY="65.0" prefHeight="25.0" prefWidth="92.0" />
-      <Text layoutX="73.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by name" />
-      <Text layoutX="268.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by month and year" />
-      <Text layoutX="514.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by sum" />
+      <ChoiceBox layoutX="575.0" layoutY="65.0" prefHeight="25.0" prefWidth="57.0" />
+      <Text layoutX="36.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by name" />
+      <Text layoutX="220.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by month and year" />
+      <Text layoutX="468.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by sum" />
       <ChoiceBox layoutX="354.0" layoutY="65.0" prefHeight="25.0" prefWidth="82.0" />
    </children>
 </AnchorPane>

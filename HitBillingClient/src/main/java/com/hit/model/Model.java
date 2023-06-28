@@ -38,4 +38,11 @@ public class Model implements Serializable {
        return client.readResponse();
     }
 
+    public Request getResponseToRequest() throws IOException, ClassNotFoundException {
+        String json = client.readResponse();
+        Gson gson = (new GsonBuilder()).create();
+        Request response = gson.fromJson(json, Request.class);
+        return response;
+    }
+
 }
