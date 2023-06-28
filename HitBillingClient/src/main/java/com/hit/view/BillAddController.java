@@ -57,7 +57,8 @@ public class BillAddController implements SceneSwitcher {
             return;
         }
         HashMap<String,String> billBody = new HashMap<>();
-        billBody.put("id",String.valueOf(System.currentTimeMillis()));
+        String id = String.valueOf(System.currentTimeMillis());
+        billBody.put("id",id);
         billBody.put("billDate",billStringDate);
         billBody.put("ownerId",billOwnerStringId);
         billBody.put("billSum",billStringSum);
@@ -68,7 +69,7 @@ public class BillAddController implements SceneSwitcher {
             e.printStackTrace();
         }
         if(response.contains("Bill added successfully")){
-            customerMessage.setText("Bill added successfully");
+            customerMessage.setText("Bill added successfully! id: " + id);
         }
         else{
             customerMessage.setText("Bill addition failed");

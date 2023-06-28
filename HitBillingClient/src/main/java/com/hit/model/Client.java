@@ -38,19 +38,17 @@ public class Client {
         inputSteamReader = new InputStreamReader(clientSocket.getInputStream());
         BufferedReader in = new BufferedReader(inputSteamReader);
         Scanner scanner = new Scanner(in);
-        String json = scanner.nextLine().substring(6);
-        return json;
+        String json = scanner.nextLine();
+        return json.substring(json.indexOf("{"));
     }
 
     public void disconnect(){
         try{
             if(clientSocket.isConnected()){
-                objectOutputStream.close();
-                inputSteamReader.close();
                 clientSocket.close();
             }
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

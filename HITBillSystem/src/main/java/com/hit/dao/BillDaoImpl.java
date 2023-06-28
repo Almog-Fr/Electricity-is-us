@@ -27,18 +27,20 @@ public class BillDaoImpl implements IDao<Long, Bill> {
     }
 
 
-    public void delete(Bill bill) {
+    public boolean delete(Bill bill) {
         HashMap bills;
         try {
             ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(FILE_PATH));
             bills = (HashMap)objectInputStream.readObject();
             bills.remove(bill.getId());
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(new File(FILE_PATH)));
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(FILE_PATH));
             objectOutputStream.writeObject(bills);
             objectOutputStream.flush();
             objectOutputStream.close();
+            return true;
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
+            return false;
         }
     }
 

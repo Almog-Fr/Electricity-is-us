@@ -10,11 +10,11 @@ public class Bill implements Serializable {
     private String ownerId;
     private boolean isPayed = false;
 
-    public Bill(long id, String date, double sum, String ownerName) {
+    public Bill(long id, String date, double sum, String ownerId) {
         this.id = id;
         this.date = date;
         this.sum = sum;
-        this.ownerId = ownerName;
+        this.ownerId = ownerId;
     }
 
     public long getId() {
@@ -39,5 +39,10 @@ public class Bill implements Serializable {
 
     public void setPayed(boolean payed) {
         isPayed = payed;
+    }
+
+    public String[] toArray(){
+        String[] arr = {Long.toString(this.id),this.date,this.ownerId,Boolean.toString(this.isPayed)};
+        return arr;
     }
 }

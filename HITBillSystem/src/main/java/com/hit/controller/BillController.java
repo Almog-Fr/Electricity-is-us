@@ -22,4 +22,8 @@ public class BillController {
     public Bill getBill(long billId){
         return billService.getBill(billId);
     }
+
+    public boolean removeBill(Bill bill){
+        return billService.removeBill(bill);
+    }
 }

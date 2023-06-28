@@ -1,6 +1,7 @@
 package com.hit.service;
 
 import com.hit.dao.CustomerDaoImpl;
+import com.hit.dm.Bill;
 import com.hit.dm.Customer;
 
 import java.util.ArrayList;
@@ -31,4 +32,13 @@ public class CustomerService {
         return customerDao.getCustomers(customerName);
     }
 
+    public boolean addBillToCustomer(Bill bill, long customerId) {
+        Customer customer = customerDao.find(customerId);
+        if(customer.addBill(bill)){
+            if(customerDao.save(customer)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

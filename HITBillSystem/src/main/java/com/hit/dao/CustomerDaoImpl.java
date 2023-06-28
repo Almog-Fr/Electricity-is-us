@@ -47,7 +47,7 @@ public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
             customers.put(customer.getId(), customer);
             objectInputStream.close();
 
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(new File(FILE_PATH)));
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(FILE_PATH));
             objectOutputStream.writeObject(customers);
             objectOutputStream.flush();
             objectOutputStream.close();
@@ -62,7 +62,7 @@ public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
         ArrayList<Customer> customersList = new ArrayList<>();
         KMP kmp = new KMP();
         try {
-            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(new File(FILE_PATH)));
+            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(FILE_PATH));
             HashMap<Long, Customer> customers = (HashMap<Long, Customer>) objectInputStream.readObject();
             objectInputStream.close();
             for(Customer customer: customers.values()){
@@ -71,7 +71,7 @@ public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
                 }
             }
 
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(new File(FILE_PATH)));
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(FILE_PATH));
             objectOutputStream.writeObject(customers);
             objectOutputStream.flush();
             objectOutputStream.close();

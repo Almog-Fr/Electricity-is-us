@@ -6,11 +6,8 @@ import java.util.HashMap;
 public class test {
 
     public static void main(String[] args) {
-        HashMap<Integer,String> test = new HashMap<>();
-        test.put(1,"hi");
-
-        String hi = test.get(2);
-        System.out.println(hi == null);
+        String test = "{hi my name is jeff}";
+        System.out.println(System.getProperty("user.dir") + "\\src\\main\\java\\com\\it\\resources\\transparent%20logo.png");
 
     }
 }
