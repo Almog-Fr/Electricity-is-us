@@ -3,6 +3,8 @@ package com.hit.service;
 import com.hit.dao.BillDaoImpl;
 import com.hit.dm.Bill;
 
+import java.util.ArrayList;
+
 public class BillService {
 
 
@@ -41,4 +43,15 @@ public class BillService {
         return billDao.delete(bill);
     }
 
+    public ArrayList<String> getAll(){
+        return billDao.getAll();
+    }
+
+    public ArrayList<String> getIdFilteredBills(String id) {
+        return billDao.getIdFilteredBills(id);
+    }
+
+    public ArrayList<String> getSumFilteredBills(double sum, String threshold) {
+        return billDao.getSumFilteredBills(sum,threshold);
+    }
 }
