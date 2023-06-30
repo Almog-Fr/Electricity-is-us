@@ -43,6 +43,7 @@ public class ElectricianViewController implements SceneSwitcher {
     public void onViewCustomersButtonClick(ActionEvent event) {
     }
 
-    public void onViewBillsButtonClick(ActionEvent event) {
+    public void onViewBillsButtonClick(ActionEvent event) throws IOException {
+        changeScene(event,"all-bill-view.fxml");
     }
 }

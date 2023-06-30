@@ -9,6 +9,7 @@ import com.hit.dm.Customer;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -104,6 +105,73 @@ public class HandleRequest implements Runnable {
                         out.println(json);
                     }
                 }
+
+                if(header.contains("all")){
+                    ArrayList<String> allBills = billController.getAll();
+                    if(allBills.size() > 0){
+                        HashMap<String, String> body = new HashMap<>();
+                        int i = 0;
+                        for(String entry : allBills){
+                            body.put(String.valueOf(i),entry);
+                            i++;
+                        }
+                        Request response = new Request("success", body);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                    else {
+                        HashMap<String, String> messages = new HashMap<>();
+                        messages.put("message", "No bills were found");
+                        Request response = new Request("failure", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                }
+
+                if(header.contains("billsById")){
+                    ArrayList<String> allBills = billController.getIdFilteredBills(request.getBody().get("id"));
+                    if(allBills.size() > 0){
+                        HashMap<String, String> body = new HashMap<>();
+                        int i = 0;
+                        for(String entry : allBills){
+                            body.put(String.valueOf(i),entry);
+                            i++;
+                        }
+                        Request response = new Request("success", body);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                    else {
+                        HashMap<String, String> messages = new HashMap<>();
+                        messages.put("message", "No bills were found");
+                        Request response = new Request("failure", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                }
+
+                if(header.contains("billsBySum")){
+                    ArrayList<String> allBills = billController.getSumFilteredBills(Double.parseDouble(request.getBody().get("sum")),request.getBody().get("threshold"));
+                    if(allBills.size() > 0){
+                        HashMap<String, String> body = new HashMap<>();
+                        int i = 0;
+                        for(String entry : allBills){
+                            body.put(String.valueOf(i),entry);
+                            i++;
+                        }
+                        Request response = new Request("success", body);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                    else {
+                        HashMap<String, String> messages = new HashMap<>();
+                        messages.put("message", "No bills were found");
+                        Request response = new Request("failure", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                }
+
 
             } else if (header.contains("customer")) {
                 if(header.contains("add")){

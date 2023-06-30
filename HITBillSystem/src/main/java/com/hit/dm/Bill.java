@@ -41,8 +41,8 @@ public class Bill implements Serializable {
         isPayed = payed;
     }
 
-    public String[] toArray(){
-        String[] arr = {Long.toString(this.id),this.date,this.ownerId,Boolean.toString(this.isPayed)};
-        return arr;
+    public String toString(){
+        String bill = "" + this.id +","+ this.date +","+ this.sum +","+ this.ownerId;
+        return bill;
     }
 }

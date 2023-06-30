@@ -4,6 +4,8 @@ import com.hit.dao.BillDaoImpl;
 import com.hit.dm.Bill;
 import com.hit.service.BillService;
 
+import java.util.ArrayList;
+
 public class BillController {
     BillService billService = new BillService(new BillDaoImpl());
 
@@ -25,5 +27,15 @@ public class BillController {
 
     public boolean removeBill(Bill bill){
         return billService.removeBill(bill);
+    }
+
+    public ArrayList<String> getAll(){return billService.getAll();}
+
+    public ArrayList<String> getIdFilteredBills(String id){
+        return billService.getIdFilteredBills(id);
+    }
+
+    public ArrayList<String> getSumFilteredBills(double sum, String threshold) {
+        return billService.getSumFilteredBills(sum,threshold);
     }
 }

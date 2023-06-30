@@ -26,6 +26,11 @@ public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
     }
 
     @Override
+    public ArrayList<String> getAll() {
+        return null;
+    }
+
+    @Override
     public Customer find(Long id) throws IllegalArgumentException {
         HashMap<Long, Customer> customers = null;
         try {
