@@ -41,4 +41,22 @@ public class CustomerService {
         }
         return false;
     }
+
+    public ArrayList<String> getAll() {
+        return customerDao.getAll();
+    }
+
+    public ArrayList<String> getIdFilteredBills(String id) {
+        return customerDao.getIdFilteredBills(id);
+    }
+
+    public ArrayList<String> getSumFilteredBills(double sum, String threshold) {
+        return customerDao.getSumFilteredBills(sum,threshold);
+    }
+
+    public Boolean payBill(long id) {
+        Customer customer = getCustomer(id);
+        customer.reduceUnpayedBills();
+        return customerDao.save(customer);
+    }
 }

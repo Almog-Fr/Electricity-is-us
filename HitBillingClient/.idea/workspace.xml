@@ -5,21 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbb8fb1c-f41c-4890-8512-2257795572ef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/controller/BillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/controller/BillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dao/BillDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dao/BillDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dao/CustomerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dao/CustomerDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dao/IDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dao/IDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dm/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dm/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dm/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/dm/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/HandleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/server/HandleRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/service/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/service/BillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/java/com/hit/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/resources/bill.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/resources/bill.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HITBillSystem/src/main/resources/customer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../HITBillSystem/src/main/resources/customer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/AllBillViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/AllBillViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/AllCustomerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/AllCustomerViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/CustomerViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/ElectricianViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/ElectricianViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-bill-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-bill-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-delete-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-delete-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/view/PayBillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/view/PayBillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-customer-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/all-customer-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-add-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/bill-add-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/customer-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/electrician-auth-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/electrician-auth-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/hit/view/pay-bill-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/hit/view/pay-bill-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +33,8 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -132,8 +134,23 @@
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hit/view/PayBillController.java</url>
-          <line>50</line>
+          <line>58</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/view/AllBillViewController.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/view/CustomerViewController.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/view/PayBillController.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -36,11 +36,21 @@ public class HandleRequest implements Runnable {
 
             if(header.contains("bill")){
                 if(header.contains("pay")){
-                    if(billController.payBill(Long.parseLong(request.getBody().get("id")))){
-                        out.write("Bill payed successfully!");
+                    Bill bill = billController.getBill(Long.parseLong(request.getBody().get("id")));
+                    if(billController.payBill(Long.parseLong(request.getBody().get("id"))) &&  customerController.payBill(Long.parseLong(bill.getOwnerId()))){
+                        customerController.payBill(Long.parseLong(bill.getOwnerId()));
+                        HashMap<String, String> payedBillBody = new HashMap<>();
+                        payedBillBody.put("confirm","bill " + request.getBody().get("id")+ " was payed successfully");
+                        Request response = new Request("bill/payed", payedBillBody);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
                         }
                     else{
-                        out.write("Bill pay went wrong");
+                        HashMap<String, String> messages = new HashMap<>();
+                        messages.put("message", "Bill not payed");
+                        Request response = new Request("failure", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
 
                     }
                 }
@@ -51,6 +61,23 @@ public class HandleRequest implements Runnable {
                         foundBillDetails.put("billDate", bill.getDate());
                         foundBillDetails.put("ownerId", bill.getOwnerId());
                         foundBillDetails.put("billSum", String.valueOf(bill.getSum()));
+                        Request response = new Request("bill/found", foundBillDetails);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }else{
+                        HashMap<String, String> messages = new HashMap<>();
+                        messages.put("message", "Bill not found");
+                        Request response = new Request("null", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+
+                }
+                if(header.contains("Single")){
+                    Bill bill = billController.getBill(Long.parseLong(request.getBody().get("id")));
+                    if(bill != null && !bill.isPayed()){
+                        HashMap<String, String> foundBillDetails = new HashMap<>();
+                        foundBillDetails.put("result",bill.toString());
                         Request response = new Request("bill/found", foundBillDetails);
                         String json = gson.toJson(response, Request.class);
                         out.println(json);
@@ -192,9 +219,70 @@ public class HandleRequest implements Runnable {
                         out.println(json);
                     }
                 }
-                if(header.contains("getById")){
-                    Customer customer = customerController.getCustomer(Long.parseLong(request.getBody().get("id")));
-                    out.write(gson.toJson(new Response("GET CUSTOMER", Map.of("customer",customer)),Response.class));
+                if(header.contains("customersById")){
+                    ArrayList<String> allCustomers = customerController.getIdFilteredBills(request.getBody().get("id"));
+                    if(allCustomers.size() > 0){
+                        HashMap<String, String> body = new HashMap<>();
+                        int i = 0;
+                        for(String entry : allCustomers){
+                            body.put(String.valueOf(i),entry);
+                            i++;
+                        }
+                        Request response = new Request("success", body);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                    else {
+                        HashMap<String, String> messages = new HashMap<>();
+                        messages.put("message", "No customers were found");
+                        Request response = new Request("failure", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                }
+
+                if(header.contains("customersBySum")){
+                    ArrayList<String> allCustomers = customerController.getSumFilteredBills(Double.parseDouble(request.getBody().get("sum")),request.getBody().get("threshold"));
+                    if(allCustomers.size() > 0){
+                        HashMap<String, String> body = new HashMap<>();
+                        int i = 0;
+                        for(String entry : allCustomers){
+                            body.put(String.valueOf(i),entry);
+                            i++;
+                        }
+                        Request response = new Request("success", body);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                    else {
+                        HashMap<String, String> messages = new HashMap<>();
+                        messages.put("message", "No customers were found");
+                        Request response = new Request("failure", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                }
+
+                if(header.contains("all")){
+                    ArrayList<String> allBills = customerController.getAll();
+                    if(allBills.size() > 0){
+                        HashMap<String, String> body = new HashMap<>();
+                        int i = 0;
+                        for(String entry : allBills){
+                            body.put(String.valueOf(i),entry);
+                            i++;
+                        }
+                        Request response = new Request("success", body);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
+                    else {
+                        HashMap<String, String> messages = new HashMap<>();
+                        messages.put("message", "No customers were found");
+                        Request response = new Request("failure", messages);
+                        String json = gson.toJson(response, Request.class);
+                        out.println(json);
+                    }
                 }
 
             }

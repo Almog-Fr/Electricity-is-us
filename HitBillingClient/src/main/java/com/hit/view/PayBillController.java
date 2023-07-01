@@ -1,5 +1,8 @@
 package com.hit.view;
 
+import com.hit.model.Model;
+import com.hit.model.ModelSingleton;
+import com.hit.model.Request;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,11 +19,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.Collection;
-import java.util.Date;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class PayBillController implements Initializable,SceneSwitcher {
+    Model model = ModelSingleton.getInstance();
+    @FXML
+    public Text billIdTextPayMenu;
+    @FXML
+    public Text billDate;
+    @FXML
+    public Text sumTextPayMenu;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -58,13 +66,26 @@ public class PayBillController implements Initializable,SceneSwitcher {
             return;
         }
 
-        LocalDate date = LocalDate.of(Integer.parseInt(chosenYear),Integer.parseInt(chosenMonth),1);
+        LocalDate date = LocalDate.of(Integer.parseInt("20"+chosenYear),Integer.parseInt(chosenMonth),1);
         if(date.isBefore(LocalDate.now())){
             customerMessage.setText("Credit card details are invalid");
             return;
         }
-
-        //Set Bill as payed
+        HashMap body = new HashMap<>();
+        body.put("id",billIdTextPayMenu.getText());
+        model.sendRequest("bill/pay",body);
+        Request response = null;
+        try {
+            response = model.getResponseToRequest();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        if(response.getHeader().contains("failure")){
+            customerMessage.setText("No bills were found.");
+        }
+        else{
+            customerMessage.setText("Bill Payed successfully!");
+        }
     }
 
     @Override
@@ -79,5 +100,11 @@ public class PayBillController implements Initializable,SceneSwitcher {
     @Override
     public void onBackButtonClick(ActionEvent event) throws IOException {
         changeScene(event,"customer-view.fxml");
+    }
+
+    public void setDisplayBill(Map bill){
+        billIdTextPayMenu.setText(bill.get("id").toString());
+        billDate.setText(bill.get("date").toString());
+        sumTextPayMenu.setText(bill.get("sum").toString());
     }
 }
