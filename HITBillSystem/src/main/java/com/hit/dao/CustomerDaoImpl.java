@@ -1,11 +1,13 @@
 package com.hit.dao;
 
+import com.hit.dm.Bill;
 import com.hit.dm.Customer;
 import main.java.com.hit.algorithim.KMP;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
 
@@ -27,7 +29,20 @@ public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
 
     @Override
     public ArrayList<String> getAll() {
-        return null;
+        ArrayList<String> customersArr = new ArrayList();
+        HashMap<Long, Customer> allCustomers;
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(FILE_PATH));
+            allCustomers = (HashMap<Long, Customer>) objectInputStream.readObject();
+            for(Map.Entry<Long, Customer> set: allCustomers.entrySet()){
+                customersArr.add(set.getValue().toString());
+            }
+            objectInputStream.close();
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+
+        return customersArr;
     }
 
     @Override
@@ -91,5 +106,57 @@ public class CustomerDaoImpl implements com.hit.dao.IDao<Long, Customer> {
     private boolean readData() throws IOException, ClassNotFoundException {
         File file = new File(FILE_PATH);
         return file.exists() || file.length() == 0;
+    }
+
+    public ArrayList<String> getIdFilteredBills(String id) {
+        ArrayList<String> customersArr = new ArrayList();
+        KMP kmp = new KMP();
+        HashMap<Long, Customer> allCustomers;
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(FILE_PATH));
+            allCustomers = (HashMap<Long, Customer>) objectInputStream.readObject();
+            for(Map.Entry<Long, Customer> set: allCustomers.entrySet()){
+                if(kmp.isPatternInText(id,String.valueOf(set.getValue().getId()))) {
+                    customersArr.add(set.getValue().toString());
+                }
+            }
+            objectInputStream.close();
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+
+        return customersArr;
+    }
+
+    public ArrayList<String> getSumFilteredBills(double sum, String threshold) {
+        ArrayList<String> customersArr = new ArrayList();
+        HashMap<Long, Customer> allCustomers;
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(FILE_PATH));
+            allCustomers = (HashMap<Long, Customer>) objectInputStream.readObject();
+            for(Map.Entry<Long, Customer> set: allCustomers.entrySet()){
+                if(threshold.equals("greater than")){
+                    if(set.getValue().getBalance() > sum){
+                        customersArr.add(set.getValue().toString());
+                    }
+                }
+                if(threshold.equals("lower than")){
+                    if(set.getValue().getBalance() < sum){
+                        customersArr.add(set.getValue().toString());
+                    }
+                }
+                if(threshold.equals("equals")){
+                    if(set.getValue().getBalance() == sum){
+                        customersArr.add(set.getValue().toString());
+                    }
+                }
+
+            }
+            objectInputStream.close();
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+
+        return customersArr;
     }
 }

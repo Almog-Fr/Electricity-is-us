@@ -1,5 +1,7 @@
 package com.hit.dm;
 
+import com.hit.controller.BillController;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +11,7 @@ public class Customer implements Serializable {
     String fullName;
     double balance = 0;
     List<Long> billIds = new ArrayList();
+    int unpayedBills = 0;
 
     public Customer(long id, String fullName) {
         this.id = id;
@@ -39,9 +42,29 @@ public class Customer implements Serializable {
         if(bill != null){
             billIds.add(bill.getId());
             this.balance += bill.getSum();
+            this.unpayedBills++;
             return true;
         }
 
         return false;
+    }
+
+    public int getUnpayedBills(){
+        return this.unpayedBills;
+    }
+
+    public String toString(){
+        String customer = "" + this.id +","+ this.fullName +","+ this.balance +","+ this.billIds.size() + "," +this.unpayedBills;
+        return customer;
+    }
+
+
+    public void reduceUnpayedBills() {
+        if(this.unpayedBills == 0){
+            return;
+        }
+        else{
+            this.unpayedBills--;
+        }
     }
 }

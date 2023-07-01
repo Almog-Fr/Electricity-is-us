@@ -40,7 +40,8 @@ public class ElectricianViewController implements SceneSwitcher {
         changeScene(event,"bill-delete-view.fxml");
     }
 
-    public void onViewCustomersButtonClick(ActionEvent event) {
+    public void onViewCustomersButtonClick(ActionEvent event) throws IOException {
+        changeScene(event,"all-customer-view.fxml");
     }
 
     public void onViewBillsButtonClick(ActionEvent event) throws IOException {
